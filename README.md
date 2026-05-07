@@ -553,28 +553,374 @@
     <script>
         // Tarot Card Data
         const tarotCards = [
-            { name: "The Fool", symbol: "🌟", meaning: "New beginnings, innocence, spontaneity, free spirit" },
-            { name: "The Magician", symbol: "✨", meaning: "Manifestation, resourcefulness, power, inspired action" },
-            { name: "The High Priestess", symbol: "🌙", meaning: "Intuition, sacred knowledge, divine feminine, subconscious" },
-            { name: "The Empress", symbol: "🌸", meaning: "Femininity, beauty, nature, nurturing, abundance" },
-            { name: "The Emperor", symbol: "👑", meaning: "Authority, structure, control, fatherhood, stability" },
-            { name: "The Hierophant", symbol: "📿", meaning: "Spiritual wisdom, tradition, conformity, morality" },
-            { name: "The Lovers", symbol: "💕", meaning: "Love, harmony, relationships, values alignment, choices" },
-            { name: "The Chariot", symbol: "⚡", meaning: "Control, willpower, success, determination, action" },
-            { name: "Strength", symbol: "🦁", meaning: "Courage, persuasion, influence, compassion, inner strength" },
-            { name: "The Hermit", symbol: "🔮", meaning: "Soul searching, introspection, inner guidance, solitude" },
-            { name: "Wheel of Fortune", symbol: "🎡", meaning: "Good luck, karma, life cycles, destiny, turning point" },
-            { name: "Justice", symbol: "⚖️", meaning: "Fairness, truth, cause and effect, law, clarity" },
-            { name: "The Hanged Man", symbol: "🙃", meaning: "Pause, surrender, letting go, new perspectives" },
-            { name: "Death", symbol: "🦋", meaning: "Endings, change, transformation, transition, renewal" },
-            { name: "Temperance", symbol: "🕊️", meaning: "Balance, moderation, patience, purpose, meaning" },
-            { name: "The Devil", symbol: "⛓️", meaning: "Shadow self, attachment, addiction, restriction, sexuality" },
-            { name: "The Tower", symbol: "🌩️", meaning: "Sudden change, upheaval, chaos, revelation, awakening" },
-            { name: "The Star", symbol: "⭐", meaning: "Hope, faith, purpose, renewal, spirituality, serenity" },
-            { name: "The Moon", symbol: "🌕", meaning: "Illusion, fear, anxiety, subconscious, intuition" },
-            { name: "The Sun", symbol: "☀️", meaning: "Positivity, fun, warmth, success, vitality, joy" },
-            { name: "Judgement", symbol: "📯", meaning: "Reflection, reckoning, awakening, rebirth, inner calling" },
-            { name: "The World", symbol: "🌍", meaning: "Completion, integration, accomplishment, travel, wholeness" }
+            # Moebius风格 78张塔罗牌 AI生成网页（HTML）
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Moebius Tarot 78</title>
+<style>
+body {
+    margin: 0;
+    background: #0a0f1e;
+    color: #f5f5f5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+h1 {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #bbbbbb;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.prompt {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    color: #d7d7d7;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>MOEBIUS TAROT 78</h1>
+<p>超现实宇宙感 · 梦境科幻 · AI Spiritual Tarot</p>
+</header>
+
+<div class="grid">
+
+<script>
+const baseStyle = `
+Moebius style, futuristic tarot illustration, surreal cosmic landscape,
+clean line art, spiritual sci-fi atmosphere, dreamlike desert planet,
+mystical universe, cinematic composition, elegant color palette,
+French sci-fi comic aesthetic, transcendental symbolism,
+ethereal light, philosophical visual language,
+high detail, ultra clean illustration,
+3:4 aspect ratio
+`;
+
+const cards = [
+
+// Major Arcana
+{
+name: "0 The Fool",
+prompt: `young cosmic traveler walking toward a floating cliff in space, celestial birds, endless dream desert, glowing stars, innocence and transcendence, ${baseStyle}`
+},
+{
+name: "I The Magician",
+prompt: `mystic engineer manipulating floating holographic symbols, cosmic tools orbiting around hands, surreal futuristic temple, ${baseStyle}`
+},
+{
+name: "II The High Priestess",
+prompt: `silent oracle seated between cosmic pillars, moon portal behind her, dream architecture and spiritual AI atmosphere, ${baseStyle}`
+},
+{
+name: "III The Empress",
+prompt: `cosmic mother in floating bio-organic garden, surreal vegetation on alien planet, nurturing universe energy, ${baseStyle}`
+},
+{
+name: "IV The Emperor",
+prompt: `ancient galactic ruler seated on geometric throne, monumental cosmic structures, stoic philosophical atmosphere, ${baseStyle}`
+},
+{
+name: "V The Hierophant",
+prompt: `spiritual teacher transmitting holographic wisdom, sacred futuristic cathedral, cosmic ritual atmosphere, ${baseStyle}`
+},
+{
+name: "VI The Lovers",
+prompt: `two souls connected through luminous energy bridge in surreal cosmic valley, transcendent romance, ${baseStyle}`
+},
+{
+name: "VII The Chariot",
+prompt: `celestial traveler piloting biomechanical chariot through stars and desert planets, movement and determination, ${baseStyle}`
+},
+{
+name: "VIII Strength",
+prompt: `mystic figure gently taming cosmic lion made of starlight, spiritual courage and calm energy, ${baseStyle}`
+},
+{
+name: "IX The Hermit",
+prompt: `solitary wanderer carrying glowing lantern across infinite alien desert under giant galaxies, spiritual pilgrimage, ${baseStyle}`
+},
+{
+name: "X Wheel of Fortune",
+prompt: `massive cosmic wheel floating in deep universe, abstract destiny mechanism, dreamlike celestial motion, ${baseStyle}`
+},
+{
+name: "XI Justice",
+prompt: `ethereal judge balancing planets and light, geometric symmetry, futuristic sacred courtroom, ${baseStyle}`
+},
+{
+name: "XII The Hanged Man",
+prompt: `floating enlightened figure suspended upside down in cosmic void, transcendental awakening, surreal dream state, ${baseStyle}`
+},
+{
+name: "XIII Death",
+prompt: `silent cosmic transformation figure crossing alien wasteland, rebirth through starlight and ruins, ${baseStyle}`
+},
+{
+name: "XIV Temperance",
+prompt: `angelic being pouring luminous liquid between futuristic vessels under galaxy sky, harmony and balance, ${baseStyle}`
+},
+{
+name: "XV The Devil",
+prompt: `surreal technological temptation, chained souls connected to glowing machine, abstract psychological symbolism, ${baseStyle}`
+},
+{
+name: "XVI The Tower",
+prompt: `futuristic tower collapsing in cosmic lightning storm, surreal destruction and awakening, ${baseStyle}`
+},
+{
+name: "XVII The Star",
+prompt: `ethereal cosmic figure pouring starlight into dream ocean beneath massive constellations, hope and transcendence, ${baseStyle}`
+},
+{
+name: "XVIII The Moon",
+prompt: `mysterious lunar desert with strange creatures and psychic pathways, surreal subconscious dreamscape, ${baseStyle}`
+},
+{
+name: "XIX The Sun",
+prompt: `radiant cosmic child beneath giant surreal sun, spiritual illumination and warmth, ${baseStyle}`
+},
+{
+name: "XX Judgement",
+prompt: `souls awakening from crystal pods beneath celestial signal, transcendence and rebirth, ${baseStyle}`
+},
+{
+name: "XXI The World",
+prompt: `cosmic dancer floating within sacred geometric portal, completion and universal harmony, ${baseStyle}`
+},
+
+// Wands
+{
+name: "Ace of Wands",
+prompt: `glowing energy staff emerging from cosmic clouds, creative force awakening, ${baseStyle}`
+},
+{
+name: "Two of Wands",
+prompt: `traveler observing multiple planets from futuristic balcony, visionary ambition, ${baseStyle}`
+},
+{
+name: "Three of Wands",
+prompt: `cosmic explorer watching ships crossing stars, expansion and discovery, ${baseStyle}`
+},
+{
+name: "Four of Wands",
+prompt: `celebration beneath floating geometric arches in alien oasis, harmony and joy, ${baseStyle}`
+},
+{
+name: "Five of Wands",
+prompt: `abstract cosmic conflict between energy staffs and dream warriors, ${baseStyle}`
+},
+{
+name: "Six of Wands",
+prompt: `victorious traveler riding luminous creature across futuristic city, triumph and recognition, ${baseStyle}`
+},
+{
+name: "Seven of Wands",
+prompt: `guardian defending elevated cosmic platform with glowing staff, resilience and courage, ${baseStyle}`
+},
+{
+name: "Eight of Wands",
+prompt: `energy staffs flying rapidly through cosmic sky, movement and acceleration, ${baseStyle}`
+},
+{
+name: "Nine of Wands",
+prompt: `weary spiritual warrior protecting sacred portal in alien desert, persistence, ${baseStyle}`
+},
+{
+name: "Ten of Wands",
+prompt: `traveler carrying heavy luminous staffs through dreamlike wasteland, burden and endurance, ${baseStyle}`
+},
+
+// Cups
+{
+name: "Ace of Cups",
+prompt: `floating cosmic chalice overflowing with starlight and spiritual water, emotional awakening, ${baseStyle}`
+},
+{
+name: "Two of Cups",
+prompt: `two cosmic beings exchanging luminous energy cups, sacred union, ${baseStyle}`
+},
+{
+name: "Three of Cups",
+prompt: `three celestial figures celebrating beneath stars in surreal oasis, friendship and joy, ${baseStyle}`
+},
+{
+name: "Four of Cups",
+prompt: `meditative traveler ignoring floating cosmic chalices, introspection and detachment, ${baseStyle}`
+},
+{
+name: "Five of Cups",
+prompt: `lonely figure mourning spilled starlight cups beneath moonlit desert, melancholy atmosphere, ${baseStyle}`
+},
+{
+name: "Six of Cups",
+prompt: `dreamlike childhood memory in futuristic village with glowing cups, nostalgia and innocence, ${baseStyle}`
+},
+{
+name: "Seven of Cups",
+prompt: `floating surreal visions emerging from cosmic chalices, illusion and imagination, ${baseStyle}`
+},
+{
+name: "Eight of Cups",
+prompt: `solitary traveler leaving glowing cups behind, walking toward distant cosmic mountains, spiritual search, ${baseStyle}`
+},
+{
+name: "Nine of Cups",
+prompt: `peaceful cosmic sage surrounded by luminous cups and celestial abundance, fulfillment, ${baseStyle}`
+},
+{
+name: "Ten of Cups",
+prompt: `harmonious cosmic family beneath rainbow nebula, emotional completion, ${baseStyle}`
+},
+
+// Swords
+{
+name: "Ace of Swords",
+prompt: `luminous cosmic sword emerging from clouds, clarity and truth, ${baseStyle}`
+},
+{
+name: "Two of Swords",
+prompt: `blindfolded futuristic oracle balancing crossed energy blades under moonlight, ${baseStyle}`
+},
+{
+name: "Three of Swords",
+prompt: `surreal crystal heart pierced by cosmic blades beneath storm sky, emotional pain, ${baseStyle}`
+},
+{
+name: "Four of Swords",
+prompt: `resting traveler inside sacred futuristic chamber, meditation and healing, ${baseStyle}`
+},
+{
+name: "Five of Swords",
+prompt: `abstract battlefield with abandoned energy swords and psychological tension, ${baseStyle}`
+},
+{
+name: "Six of Swords",
+prompt: `journey across silent cosmic sea in futuristic vessel, transition and healing, ${baseStyle}`
+},
+{
+name: "Seven of Swords",
+prompt: `mysterious rogue carrying glowing blades through surreal dream city, strategy and secrecy, ${baseStyle}`
+},
+{
+name: "Eight of Swords",
+prompt: `trapped figure surrounded by floating energy swords in psychic desert, limitation and illusion, ${baseStyle}`
+},
+{
+name: "Nine of Swords",
+prompt: `nightmare chamber filled with cosmic anxiety and glowing blades, dream terror, ${baseStyle}`
+},
+{
+name: "Ten of Swords",
+prompt: `fallen traveler beneath cosmic sunrise, ending and transformation, ${baseStyle}`
+},
+
+// Pentacles
+{
+name: "Ace of Pentacles",
+prompt: `floating cosmic coin surrounded by sacred geometry and alien vegetation, material manifestation, ${baseStyle}`
+},
+{
+name: "Two of Pentacles",
+prompt: `acrobat balancing luminous planetary coins in zero gravity, adaptability and rhythm, ${baseStyle}`
+},
+{
+name: "Three of Pentacles",
+prompt: `futuristic architects building sacred cosmic structure together, collaboration, ${baseStyle}`
+},
+{
+name: "Four of Pentacles",
+prompt: `solitary ruler protecting glowing cosmic coins in geometric fortress, control and stability, ${baseStyle}`
+},
+{
+name: "Five of Pentacles",
+prompt: `wanderers crossing frozen alien city in hardship beneath distant light, ${baseStyle}`
+},
+{
+name: "Six of Pentacles",
+prompt: `cosmic benefactor sharing luminous coins with travelers, generosity and balance, ${baseStyle}`
+},
+{
+name: "Seven of Pentacles",
+prompt: `traveler contemplating glowing energy plants in surreal garden, patience and growth, ${baseStyle}`
+},
+{
+name: "Eight of Pentacles",
+prompt: `futuristic artisan crafting sacred geometric coins with precision, mastery and dedication, ${baseStyle}`
+},
+{
+name: "Nine of Pentacles",
+prompt: `elegant cosmic noble walking through luxurious alien garden, refinement and independence, ${baseStyle}`
+},
+{
+name: "Ten of Pentacles",
+prompt: `vast cosmic civilization with sacred architecture and ancestral wisdom, legacy and abundance, ${baseStyle}`
+}
+];
+
+// 自动补足宫廷牌
+const suits = ["Wands", "Cups", "Swords", "Pentacles"];
+const courts = ["Page", "Knight", "Queen", "King"];
+
+suits.forEach(suit => {
+    courts.forEach(rank => {
+        cards.push({
+            name: `${rank} of ${suit}`,
+            prompt: `${rank.toLowerCase()} archetype of ${suit.toLowerCase()}, surreal cosmic symbolism, spiritual sci-fi character design, mystical futuristic landscape, ${baseStyle}`
+        });
+    });
+});
+
+const container = document.querySelector('.grid');
+
+cards.forEach(card => {
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = `
+        <h2>${card.name}</h2>
+        <div class="prompt">${card.prompt}</div>
+    `;
+    container.appendChild(div);
+});
+</script>
+</body>
+</html>
         ];
 
         const themeInterpretations = {
